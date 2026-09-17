@@ -97,3 +97,22 @@ h2 { margin-bottom: 0; font-family: Jua, sans-serif; font-size: 30px; font-weigh
 .reward-card .card-progress > div { top: 0; bottom: auto; z-index: 4; height: 100%; background: #c8ccd0; transition: height .5s cubic-bezier(.22,1,.36,1); }
 .mission-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
 .mission-card { padding: 7px 2px 6px; border-radius: 9px; }.mission-emoji { height: 38px; margin-bottom: 5px; font-size: 21px; border-radius: 7px; }.mission-name { min-height: 28px; margin-bottom: 5px; font-size: 9px; line-height: 1.1; white-space: normal; }.done-button { padding: 5px 1px; font-size: 8px; }
+
+/* Give the desktop view enough room for ten readable mission controls. */
+.app-shell { width: min(100%, 1000px); padding: 30px 42px 48px; }
+.mission-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; }
+.mission-card { min-height: 170px; padding: 14px 6px 12px; border-radius: 13px; }
+.mission-emoji { height: 68px; margin-bottom: 10px; font-size: 36px; border-radius: 10px; }
+.mission-name { min-height: 32px; margin-bottom: 10px; font-size: 13px; line-height: 1.25; }
+.done-button { min-height: 42px; padding: 9px 3px; font-size: 13px; border-radius: 9px; }
+.mission-card.completed .done-button { font-size: 12px; }
+
+/* Scale the full mission row and its controls together. */
+.app-shell { width: min(100%, 1280px); max-width: 1280px; padding: 30px 50px 52px; }
+.mission-section { padding: 0; }
+.mission-grid { gap: 10px; }
+.mission-card { min-height: 215px; padding: 18px 8px 16px; }
+.mission-emoji { height: 84px; margin-bottom: 12px; font-size: 44px; }
+.mission-name { min-height: 36px; margin-bottom: 12px; font-size: 16px; }
+.done-button { min-height: 58px; padding: 13px 4px; font-size: 16px; border-radius: 11px; }
+.mission-card.completed .done-button { font-size: 15px; }
