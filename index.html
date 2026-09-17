@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocket Baby | 오늘의 미션</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <div class="sunny-glow" aria-hidden="true"></div>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">P</div>
+        <div>
+          <p class="brand-name">POCKET BABY</p>
+          <p class="brand-subtitle">오늘도 반짝반짝!</p>
+        </div>
+      </div>
+      <div class="date-pill"><span class="date-dot"></span><span id="todayLabel">오늘의 미션</span></div>
+    </header>
+
+    <section class="hero" aria-label="피카츄 카드 보상">
+      <div class="hero-character" aria-label="피카츄 카드 보상, 100개 중 0개 완성" role="img">
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✦</div>
+        <div class="reward-card">
+          <div class="card-header"><span>POCKET BABY</span><b>★</b></div>
+          <div class="card-art">
+            <div class="card-shine"></div>
+            <div class="pikachu-tail"></div>
+            <div class="pikachu-ear left"></div><div class="pikachu-ear right"></div>
+            <div class="pikachu-face"><i class="eye left"></i><i class="eye right"></i><i class="cheek left"></i><i class="cheek right"></i><i class="mouth"></i></div>
+          </div>
+          <div class="card-footer"><b id="rewardCount">0</b><span> / 10개 모으기</span></div>
+          <div class="card-progress"><div id="rewardFill"></div></div>
+        </div>
+        <div class="speech-bubble" id="cardMessage">할 수 있어!</div>
+      </div>
+    </section>
+
+    <section class="mission-section" aria-labelledby="missionTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">TODAY'S QUEST</p>
+          <h2 id="missionTitle">오늘 할 일</h2>
+        </div>
+        <div class="star-counter"><span>★</span><b id="starCount">0</b><small> STARS</small></div>
+      </div>
+
+      <div class="mission-grid" id="missionGrid"></div>
+
+      <div class="completion-banner" id="completionBanner" hidden>
+        <div class="completion-star">★</div>
+        <div><strong>You got a star~</strong><span>오늘의 미션을 모두 완료했어!</span></div>
+        <div class="confetti" aria-hidden="true">✦　✧　✦</div>
+      </div>
+    </section>
+
+    <footer class="next-step" id="nextStep"><span class="next-icon">→</span><p><b>다음 미션</b><span id="nextMessage">첫 번째 미션부터 시작해볼까?</span></p></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
